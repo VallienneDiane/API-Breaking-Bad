@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --green-color: rgb(61, 150, 113);
+    --black-color: rgb(19, 18, 18);
+    --yellow-color: rgb(241, 201, 21);
+    color: rgb(243,251,246);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1px 1px black, -1px 1px 1px black, 1px -1px 1px black, -1px -1px 1px black;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--black-color);
+    z-index: -1;
+}
+
+header img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(0.2);
+}
+
+main {
+    width: 100%;
+    height: 85%;
+    display: flex;
+}
+
+aside {
+    background: linear-gradient(to bottom,
+    var(--black-color),
+    var(--green-color),
+    var(--black-color));
+    width: 20%;
+    border-right: 3px solid var(--black-color);
+}
+
+#seasons {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#seasons h2 {
+    font-size: 1.5em;
+    padding: 0 10px;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: var(--black-color);
+}
+
+#buttons {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.season {
+    font-size: 1.5em;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    background-size: 200% auto;         
+    border-radius: 10px;
+    background-color: rgba(17, 16, 16, 0.6);
+}
+
+.season:hover {
+    cursor: pointer;
+    background-color: var(--yellow-color);
+    opacity: 0.8;
+}
+
+#container {
+    background: linear-gradient(to bottom,
+    var(--black-color),
+    var(--green-color),
+    var(--black-color));
+    width: 80%;
+    overflow: scroll;
+}
+
+.infos {
+    background: linear-gradient(to bottom right,
+    rgba(255, 231, 123, 0.829),
+    rgba(189, 140, 5, 0.7));
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(51, 50, 50);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 450px;
+}
+
+.infos img {
+    max-width: 90%;
+    pointer-events: none;
+    padding: 10px 0;
+}
+
+.infos h3, .infos p {
+    pointer-events: none;
+    margin: 8px 8px;
+    text-align: center;
+}
+
+.infos h3 {
+    font-size: 2em;
+}
+
+#inputs {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.input {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+label {
+    border: 1px solid var(--black-color);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: var(--yellow-color);
+    border: 1px solid rgb(5, 5, 5);
+    text-shadow: none;
+    color: var(--yellow-color);
+}
+
+input[type="checkbox"]:checked {
+    background: var(--black-color);
+    position: relative;
+}
+
+input[type="checkbox"]:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-size: 1em;
+    color:rgb(7, 7, 7);
+    display: none;
+}
+
+input {
+    margin: 0 5px;
+}
+
+.input p {
+    font-size: 1.5em;
+}
+
+#characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.none {
+    display: none;
+}
+
+.noneStatus {
+    display: none;
+}
+
+.noneDrug {
+    display: none;
+}
+
+.character {
+    background-color:rgba(17, 16, 16, 0.6);
+    border: rgb(12, 12, 12) solid 2px;
+    border-radius: 7px;
+    height: 170px;
+    width: 170px;
+    margin: 5px;
+    transition: 0.1s ease-out;
+}
+
+.character h3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    pointer-events: none;
+}
+
+.character img {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border: solid 1px rgb(5, 5, 5);
+    display: block;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    pointer-events: none;
+    filter: grayscale(0.75);
+}
+
+.character:hover {
+    transform: scale(1.05);
+}
+
+.character:hover img {
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+.noEvent {
+    pointer-events: none;
+}
+
+.blur {
+   filter: blur(3.5px);
+}
+
+@media (max-width: 860px) {
+    main{
+        height: 85%;
+        flex-direction: column;
+
+        background: linear-gradient(to bottom,
+        var(--black-color),
+        var(--green-color),
+        var(--black-color));
+    }
+
+    aside {
+        height: 15%;
+        width: 100%;
+        background: none;
+        border-right: none;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    #seasons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 15px;
+        height: 100%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid black;
+    }
+
+    #buttons {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .season {
+        width: 100px;
+    }
+
+    #container {
+        height: 85%;
+        width: 100%;
+        background: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #inputs {
+        height: 18%;
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+    
+    .input div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input p {
+        margin-bottom: 3px;
+        font-size: 1.1em;
+    }
+
+    label {
+        margin-top: 2px;
+        border: none;
+    }
+    
+    #characters {
+        height: 82%;
+        margin-top: 10px; 
+    }
+}

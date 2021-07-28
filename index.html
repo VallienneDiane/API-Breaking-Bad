@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="JS/script.js" defer></script>
+    <title>Personnages de Breaking Bad</title>
+</head>
+<body>
+    <header>
+        <img src="img/banner3.jpeg">
+    </header>
+
+    <main>
+        <aside>
+            <div id="seasons">
+                <h2>Afficher les personnages par saison</h2>
+                <div id="buttons">
+                    <div class="season" data-season="all">Toutes</div>
+                    <div class="season" data-season="1">Saison 1</div>
+                    <div class="season" data-season="2">Saison 2</div>
+                    <div class="season" data-season="3">Saison 3</div>
+                    <div class="season" data-season="4">Saison 4</div>
+                    <div class="season" data-season="5">Saison 5</div>
+                </div>
+            </div>
+        </aside>
+
+        <div id="container">
+            <div id="inputs"> 
+                <div class="input">
+                    <p>Survie du personnage à la fin de la série ?</p>
+                    <div>
+                        <label><input class="fas fa-check" type="checkbox" checked id="alive" name="alive">Toujours vivant !</label>
+                        <label><input class="fas fa-check" type="checkbox" checked id="dead" name="dead">N'est plus de ce monde</label>
+                        <label><input class="fas fa-check" type="checkbox" checked id="presumed" name="presumed">Mystère...</label>
+                    </div>
+                </div>
+                <div class="input">
+                    <p>Activités illicites ?</p>
+                    <div>
+                        <label><input class="fas fa-check" type="checkbox" checked id="drugRelated" name="drugRelated">Oui grave</label>
+                        <label><input class="fas fa-check" type="checkbox" checked id="noDrug" name="noDrug">Non, pas du tout</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="characters"></div>
+        </div>
+    </main>
+</body>
+</html>
